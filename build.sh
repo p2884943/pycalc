@@ -2,14 +2,13 @@
 
 mkdir tempdir
 
-cp pycalc.py tempdir/.
-echo "FROM python" >> tempdir/Dockerfile
-echo "RUN pip install flask" >> tempdir/Dockerfile
-echo "COPY sample_app.py /home/pycalc/" >> tempdir/Dockerfile
-echo "EXPOSE 5050" >> tempdir/Dockerfile
-echo "CMD python3 /home/pycalc/pycalc.py" >> tempdir/Dockerfile
+cp calc.py /home/tempdir/.
+echo "FROM python" >> /home/tempdir/Dockerfile
+echo "COPY calc.py /home/pycalc/" >> /home/tempdir/Dockerfile
+echo "EXPOSE 5050" >> /home/tempdir/Dockerfile
+echo "CMD python3 /home/pycalc/calc.py" >> /home/tempdir/Dockerfile
 
-cd tempdir
+cd /home/tempdir
 
 docker build -t pycalc .
 
