@@ -1,14 +1,14 @@
 #!/bin/bash
 
-mkdir tempdir
+mkdir /home/devasc/tempdir
 
-cp calc.py /home/tempdir/.
-echo "FROM python" >> /home/tempdir/Dockerfile
-echo "COPY calc.py /home/pycalc/" >> /home/tempdir/Dockerfile
-echo "EXPOSE 5050" >> /home/tempdir/Dockerfile
-echo "CMD python3 /home/pycalc/calc.py" >> /home/tempdir/Dockerfile
+cp calc.py /home/devasc/tempdir/.
+echo "FROM python" >> /home/devasc/tempdir/Dockerfile
+echo "COPY calc.py /home/pycalc/" >> /home/devasc/tempdir/Dockerfile
+echo "EXPOSE 5050" >> /home/devasc/tempdir/Dockerfile
+echo "CMD python3 /home/pycalc/calc.py" >> /home/devasc/tempdir/Dockerfile
 
-cd /home/tempdir
+cd /home/devasc/tempdir
 
 docker build -t pycalc .
 
