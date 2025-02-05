@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Create a log file for capturing output
+LOGFILE="build.log"
+exec > >(tee -a $LOGFILE) 2>&1
+
 mkdir tempdir
 
 cp calc.py tempdir/.
