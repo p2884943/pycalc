@@ -23,6 +23,10 @@ def main():
         result = addition(num1, num2)
         print("\nThe sum of " + str(num1) + " and " + str(num2) + " is " + str(result))
 
+    if choice == 's':
+        result = subtraction(num1, num2)
+        print("\nThe difference between " + str(num1) + " and " + str(num2) + " is " + str(result))
+
 if __name__ == '__main__':
     main()
 
