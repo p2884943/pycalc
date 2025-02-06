@@ -27,6 +27,10 @@ def main():
         result = subtraction(num1, num2)
         print("\nThe difference between " + str(num1) + " and " + str(num2) + " is " + str(result))
 
+    if choice == 'd':
+        result = division(num1, num2)
+        print("\nThe quotient of " + str(num1) + " and " + str(num2) + " is " + str(result))
+
 if __name__ == '__main__':
     main()
 
