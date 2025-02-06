@@ -15,6 +15,3 @@ echo "CMD python3 /home/pycalc/calc.py" >> tempdir/Dockerfile
 cd tempdir
 
 docker build -t pycalc .
-
-docker run -t -d -p 5050:5050 --name pycalcrunning pycalc
-docker ps -a
