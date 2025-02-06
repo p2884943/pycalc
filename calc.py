@@ -31,6 +31,10 @@ def main():
         result = division(num1, num2)
         print("\nThe quotient of " + str(num1) + " and " + str(num2) + " is " + str(result))
 
+    if choice == 'm':
+        result = multiplication(num1, num2)
+        print("\nThe product of " + str(num1) + " and " + str(num2) + " is " + str(result))
+
 if __name__ == '__main__':
     main()
 
